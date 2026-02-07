@@ -9,9 +9,11 @@ JDK 25
 - `curl -sS http://localhost:8080/api/v1/posts | json_pp`
 - curl -s -H "Accept: application/json" http://localhost:8080/api/v1/posts | json_pp > posts_$(date +%F).json
 
+
+## To get count from json file
 - `grep -c "id" posts_2026-02-08.json`
 - `grep -c "userId" posts_2026-02-08.json`
 
 ### We can set default json pritty printing to response using:
-- `spring.jackson.serialization.indent-output=true`
+- `spring.jackson.serialization.indent-output=true` > not recommended in PROD environment
 - No need to apply pipe after curl *| json_pp*
